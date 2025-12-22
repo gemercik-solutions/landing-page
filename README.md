@@ -1,46 +1,76 @@
-# Astro Starter Kit: Basics
+# Gemercik Solution - Premium Landing Page
 
-```sh
-pnpm create astro@latest -- --template basics
+🚀 **Production-ready landing page** untuk Gemercik Solution - AI Solutions & Automation company di Indonesia.
+
+## ✨ Features
+
+- ✅ **Premium Design System** dengan brand Gemercik (Deep Blue, Electric Blue, Aqua Cyan, Innovation Gold)
+- ✅ **Animated Logo & Components** dengan smooth micro-interactions
+- ✅ **Responsive Navbar** dengan scroll effects & mobile menu
+- ✅ **10 Sections** lengkap: Hero, Services, Use Cases, Process, Case Studies, Pricing, FAQ, Contact
+- ✅ **SEO-Optimized** dengan structured data, OG tags, sitemap
+- ✅ **Performance-First** dengan Astro + Tailwind CSS v4
+- ✅ **Type-Safe** components dengan TypeScript & CVA
+- ✅ **WhatsApp Integration** untuk lead capture
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production  
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Server: http://localhost:4321/
 
-## 🚀 Project Structure
+## 🛠️ Tech Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Astro 5.16+** - Fast, SEO-friendly framework
+- **Tailwind CSS v4** - Utility-first styling  
+- **TypeScript** - Type safety
+- **CVA** - Component variants
+- **@astrojs/sitemap** - Auto sitemap generation
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+## 📁 Structure
+
+```
+src/
+├── components/
+│   ├── Logo.astro (animated)
+│   ├── Navbar.astro (responsive)
+│   ├── Footer.astro
+│   ├── sections/ (Hero, Services, etc.)
+│   └── ui/ (Button, Card, Container, etc.)
+├── layouts/BaseLayout.astro
+├── lib/
+│   ├── site.ts (config & content)
+│   ├── seo.ts (SEO utilities)
+│   └── cn.ts (className utility)
+├── pages/index.astro
+└── styles/
+    ├── app.css (Tailwind + tokens)
+    └── global.css (base styles)
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🎨 Customization
 
-## 🧞 Commands
+**Brand Colors:** Edit `src/styles/app.css`  
+**Site Info:** Edit `src/lib/site.ts`  
+**Content:** Edit arrays di `site.ts` (SERVICES, PRICING_TIERS, FAQ_ITEMS)
 
-All commands are run from the root of the project, from a terminal:
+## 📞 Contact
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- **Email:** gemercikstudio@gmail.com
+- **WhatsApp:** +62 813-1036-3949
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Built with ❤️ for Production-Ready Web Apps**
