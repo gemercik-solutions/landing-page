@@ -1,0 +1,31 @@
+---
+const {
+  href,
+  variant = "primary",
+  target,
+  rel,
+  type = "button",
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-cyan-400/40";
+
+const variants = {
+  primary:
+    "bg-gradient-to-r from-blue-500 to-cyan-400 text-black hover:opacity-90",
+  ghost:
+    "border border-white/15 bg-white/5 text-white hover:bg-white/10",
+};
+
+const classes = `${base} ${variants[variant]}`;
+---
+
+{href ? (
+  <a href={href} class={classes} target={target} rel={rel}>
+    <slot />
+  </a>
+) : (
+  <button type={type} class={classes}>
+    <slot />
+  </button>
+)}

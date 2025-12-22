@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from "../components/sections/Hero.astro";
+import TrustedBy from "../components/sections/TrustedBy.astro";
+import Services from "../components/sections/Services.astro";
+import UseCases from "../components/sections/UseCases.astro";
+import Process from "../components/sections/Process.astro";
+import CaseStudies from "../components/sections/CaseStudies.astro";
+import Pricing from "../components/sections/Pricing.astro";
+import FAQ from "../components/sections/FAQ.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
-
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+	title="AI Solutions & Automation untuk Bisnis"
+	description="Gemercik Solution membantu bisnis menghemat waktu, menekan biaya operasional, dan meningkatkan output dengan AI dan automation yang terukur."
+  canonicalPath="/"
+>
+	<Navbar />
+	<main>
+		<Hero />
+		<TrustedBy />
+		<Services />
+		<UseCases />
+		<Process />
+		<CaseStudies />
+    <Pricing />
+    <FAQ />
+    <Contact />
+	</main>
+	<Footer />
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import Container from "../ui/Container.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import Button from "../ui/Button.astro";
+
+const plans = [
+  {
+    name: "Starter",
+    price: "Mulai 3jt",
+    features: ["Audit proses", "1 automation", "Support basic"],
+  },
+  {
+    name: "Growth",
+    price: "Custom",
+    highlight: true,
+    features: ["Multi automation", "AI integration", "Dashboard"],
+  },
+  {
+    name: "Enterprise",
+    price: "By scope",
+    features: ["System design", "Scale & SLA", "Dedicated support"],
+  },
+];
+---
+<section id="pricing" class="py-24">
+  <Container>
+    <SectionTitle
+      eyebrow="Pricing"
+      title="Skema fleksibel"
+      subtitle="Disesuaikan dengan kompleksitas bisnis."
+    />
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {plans.map((p) => (
+        <div
+          class={`rounded-2xl border p-6 ${
+            p.highlight
+              ? "border-cyan-400/40 bg-cyan-400/10"
+              : "border-white/10 bg-white/5"
+          }`}
+        >
+          <h3 class="font-semibold">{p.name}</h3>
+          <p class="mt-2 text-2xl font-bold">{p.price}</p>
+          <ul class="mt-4 space-y-2 text-sm opacity-80">
+            {p.features.map((f) => <li>• {f}</li>)}
+          </ul>
+          <div class="mt-6">
+            <Button href="#contact">Konsultasi</Button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

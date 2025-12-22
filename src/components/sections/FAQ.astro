@@ -1,0 +1,27 @@
+---
+import Container from "../ui/Container.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+
+const faqs = [
+  ["Apakah bisa tanpa AI?", "Bisa. Automation tanpa AI sering jadi langkah awal."],
+  ["Berapa lama implementasi?", "Rata-rata 2–6 minggu tergantung scope."],
+  ["Apakah aman untuk data?", "Ya. Kami desain sesuai kebutuhan compliance klien."],
+];
+---
+<section class="py-24 bg-white/5">
+  <Container>
+    <SectionTitle
+      eyebrow="FAQ"
+      title="Pertanyaan umum"
+    />
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {faqs.map(([q, a]) => (
+        <div class="rounded-xl border border-white/10 p-5">
+          <p class="font-medium">{q}</p>
+          <p class="mt-2 text-sm opacity-80">{a}</p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

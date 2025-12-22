@@ -1,0 +1,74 @@
+---
+import Container from "../ui/Container.astro";
+import { SITE } from "../../lib/site";
+
+const waLink = `https://wa.me/62${SITE.whatsapp.replace(/^0/, "")}?text=${encodeURIComponent(
+  "Halo Gemercik Solution, saya ingin konsultasi implementasi AI/Automation."
+)}`;
+
+// Ganti dengan endpoint Formspree kamu, contoh: https://formspree.io/f/xxxxxxx
+const formAction = "https://formspree.io/f/your_id";
+---
+<section id="contact" class="py-20 sm:py-24">
+  <Container>
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="text-3xl font-semibold">Diskusikan kebutuhan bisnis kamu.</h2>
+        <p class="mt-4 opacity-85">
+          Ceritakan proses yang paling memakan waktu. Kami akan bantu mapping quick wins,
+          risiko, dan roadmap implementasi.
+        </p>
+
+        <div class="mt-6 space-y-2 text-sm opacity-90">
+          <div>Email: <a class="underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></div>
+          <div>WhatsApp: <a class="underline" href={waLink} target="_blank" rel="noreferrer">{SITE.whatsapp}</a></div>
+        </div>
+      </div>
+
+      <form
+        method="POST"
+        action={formAction}
+        class="rounded-[24px] border border-white/10 bg-white/5 p-7"
+      >
+        <div class="grid gap-4">
+          <input name="name" required placeholder="Nama" class="field" />
+          <input name="company" placeholder="Bisnis / Perusahaan" class="field" />
+          <input name="email" type="email" required placeholder="Email" class="field" />
+          <textarea name="message" required rows="5" placeholder="Ceritakan kebutuhan kamu..." class="field"></textarea>
+          <button class="btn" type="submit">Kirim</button>
+          <a class="btn-ghost" href={waLink} target="_blank" rel="noreferrer">Chat via WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </Container>
+
+  <style>
+    .field{
+      width:100%;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(5,11,20,.35);
+      padding: .85rem .95rem;
+      color: rgba(245,248,252,.92);
+      outline: none;
+    }
+    .field:focus{
+      border-color: rgba(37,223,255,.45);
+      box-shadow: 0 0 0 4px rgba(37,223,255,.12);
+    }
+    .btn{
+      border-radius:14px;
+      padding: .9rem 1rem;
+      background: linear-gradient(90deg, rgba(16,114,246,.95), rgba(37,223,255,.85));
+      color: #050B14;
+      font-weight: 700;
+    }
+    .btn-ghost{
+      text-align:center;
+      border-radius:14px;
+      padding: .9rem 1rem;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+    }
+  </style>
+</section>
