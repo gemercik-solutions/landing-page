@@ -1,253 +1,174 @@
 # 🚀 Gemercik Solution - Landing Page
 
-<div align="center">
+Modern landing page untuk perusahaan teknologi yang fokus pada pemberdayaan UMKM Indonesia.
 
-**Solusi Teknologi Terpercaya untuk UMKM Indonesia**
-
-[![Astro](https://img.shields.io/badge/Astro-4.0-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
-[Demo](https://gemercik.id) • [Dokumentasi](#-dokumentasi) • [Kontribusi](#-contributing)
-
-</div>
+[![Astro](https://img.shields.io/badge/Astro-5.16-FF5D01?style=flat-square&logo=astro)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 
 ---
 
-## 📋 Daftar Isi
-
-- [Tentang Project](#-tentang-project)
-- [Tech Stack](#-tech-stack)
-- [Fitur Utama](#-fitur-utama)
-- [Prerequisites](#-prerequisites)
-- [Instalasi](#-instalasi)
-- [Development](#-development)
-- [Build & Deploy](#-build--deploy)
-- [Struktur Project](#-struktur-project)
-- [Internationalization (i18n)](#-internationalization-i18n)
-- [Kustomisasi](#-kustomisasi)
-- [Performance Optimization](#-performance-optimization)
-- [SEO](#-seo)
-- [Contributing](#-contributing)
-
----
-
-## 🎯 Tentang Project
-
-**Gemercik Solution Landing Page** adalah website modern dan responsif yang dibangun untuk perusahaan teknologi yang fokus pada pemberdayaan UMKM Indonesia melalui solusi digital. Website ini menampilkan layanan, portfolio, testimonial, dan informasi kontak dengan desain yang elegan dan performa yang optimal.
-
-### Mengapa Project Ini?
-
-- 🎨 **Design Modern**: Menggunakan gradient blue-yellow (#0EA5E9 - #F59E0B) yang mencerminkan brand identity
-- ⚡ **Ultra Fast**: Built with Astro untuk performa maksimal (100/100 Lighthouse score)
-- 🌐 **Multilingual**: Support Bahasa Indonesia & English
-- 📱 **Responsive**: Perfect di semua device (mobile, tablet, desktop)
-- ♿ **Accessible**: Mengikuti standar WCAG 2.1 AA
-- 🔍 **SEO Optimized**: Meta tags lengkap & structured data
-
----
-
-## 🛠️ Tech Stack
-
-| Technology       | Version | Purpose                           |
-| ---------------- | ------- | --------------------------------- |
-| **Astro**        | 4.x     | Static Site Generator & Framework |
-| **Tailwind CSS** | v4      | Styling & Design System           |
-| **TypeScript**   | 5.x     | Type Safety                       |
-| **pnpm**         | Latest  | Package Manager                   |
-
-### Key Dependencies
-
-```json
-{
-  "astro": "^4.0.0",
-  "@astrojs/sitemap": "^3.x",
-  "@tailwindcss/vite": "^4.x",
-  "@fontsource-variable/inter": "^5.x",
-  "@fontsource-variable/plus-jakarta-sans": "^5.x"
-}
-```
-
----
-
-## ✨ Fitur Utama
-
-### 🎨 Design System
-
-- **Color Palette**:
-  - Primary (Blue): `#0EA5E9` - Cyan/Sky blue
-  - Secondary (Yellow): `#F59E0B` - Amber/Gold
-  - Background: Gradient dari primary ke secondary
-  - Dark theme dengan blur effects & glass morphism
-
-### 📦 Komponen
-
-- ✅ Hero Section dengan animated background
-- ✅ Services Grid dengan hover effects
-- ✅ About Section dengan statistics
-- ✅ Process Timeline (4 steps)
-- ✅ Testimonials Carousel
-- ✅ FAQ Accordion
-- ✅ Contact Form dengan validation
-- ✅ Footer dengan social links
-- ✅ Floating WhatsApp & Language Switcher
-
-### 🌍 Internationalization
-
-- Bahasa Indonesia (default)
-- English
-- Easy to add more languages
-
-### 🔍 SEO Features
-
-- Complete meta tags (Open Graph, Twitter Card)
-- JSON-LD structured data
-- Sitemap generation
-- Canonical URLs
-- Robots.txt
-- Optimized images
-
----
-
-## 📦 Prerequisites
-
-Pastikan Anda sudah install:
-
-- **Node.js** >= 18.0.0
-- **pnpm** >= 8.0.0 (recommended) atau npm/yarn
+## ⚡ Quick Start
 
 ```bash
-# Install pnpm (jika belum)
-npm install -g pnpm
-
-# Verify installation
-node --version  # v18+
-pnpm --version  # v8+
-```
-
----
-
-## 🚀 Instalasi
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/gemercik-solution/landing-page.git
-cd landing-page
-```
-
-### 2. Install Dependencies
-
-```bash
+# Install dependencies
 pnpm install
-```
 
-### 3. Setup Environment (Optional)
-
-Jika diperlukan, buat file `.env`:
-
-```env
-PUBLIC_SITE_URL=https://gemercik.id
-PUBLIC_CONTACT_EMAIL=halo@gemercik.id
-PUBLIC_WHATSAPP=6281234567890
-```
-
----
-
-## 💻 Development
-
-### Start Dev Server
-
-```bash
-pnpm dev
-```
-
-Server akan berjalan di: `http://localhost:4321`
-
-### Development Commands
-
-```bash
-# Start dev server
+# Development server
 pnpm dev
 
 # Build for production
 pnpm build
 
-# Preview production build
+# Preview build
 pnpm preview
-
-# Run type checking
-pnpm check
 ```
-
-### Hot Reload
-
-Astro secara otomatis reload browser saat Anda mengubah file:
-
-- `.astro` files
-- `.ts/.js` files
-- `globals.css`
 
 ---
 
-## 🏗️ Build & Deploy
+## 🛠️ Tech Stack
 
-### Production Build
+- **Astro 5.16** - Static Site Generator
+- **Tailwind CSS v4** - Styling (CSS-based config)
+- **TypeScript** - Type safety
+- **Custom i18n** - Indonesian & English support
 
-```bash
-# Build static files
-pnpm build
+---
 
-# Output akan ada di: dist/
+## 📁 Project Structure
+
+```
+/
+├── src/
+│   ├── components/     # Astro components
+│   ├── layouts/        # Layout templates
+│   ├── lib/
+│   │   └── i18n.ts    # Translation system (480 lines, 150+ keys)
+│   ├── pages/          # Routes
+│   └── styles/         # Global CSS
+├── public/
+│   ├── images/         # Static assets
+│   └── robots.txt      # SEO
+└── dist/              # Build output
 ```
 
-### Preview Build
+---
 
-```bash
-# Preview production build locally
-pnpm preview
+## 🌐 Internationalization
+
+### System Overview
+
+File: `src/lib/i18n.ts` contains:
+- 150+ translation keys
+- Indonesian (default) & English
+- Runtime language switching via data-i18n attributes
+
+### Usage Pattern
+
+```astro
+---
+import { t } from '../lib/i18n';
+
+const title = t('section.title');        // Get Indonesian text
+const titleKey = 'section.title';        // Key for data-i18n
+---
+
+<!-- Display actual text, enable runtime switching -->
+<h1 data-i18n={titleKey}>{title}</h1>
 ```
 
-### Deploy Options
+### Adding Translations
 
-#### 1. **Vercel** (Recommended)
-
-```bash
-# Install Vercel CLI
-pnpm add -g vercel
-
-# Deploy
-vercel
+1. Edit `src/lib/i18n.ts`:
+```typescript
+export const translations = {
+  id: { 'key': 'Teks Indonesia' },
+  en: { 'key': 'English Text' }
+};
 ```
 
-#### 2. **Netlify**
+2. Use in component (see pattern above)
 
-```bash
-# Install Netlify CLI
-pnpm add -g netlify-cli
+3. Test language toggle (ID/EN button in header)
 
-# Deploy
-netlify deploy --prod
-```
+---
 
-#### 3. **Static Hosting** (Apache/Nginx)
+## 🎨 Design System
 
-Upload folder `dist/` ke server Anda.
+**Colors:**
+- Primary: `#0EA5E9` (Sky/Cyan)
+- Secondary: `#F59E0B` (Amber/Gold)
+- Gradients: Blue to Yellow throughout
 
-**Nginx config:**
+**Components:**
+- Hero with animated background
+- Services grid with hover effects
+- About section with stats
+- Process timeline (4 steps)
+- FAQ accordion
+- Contact form
+- Testimonials
 
-```nginx
-server {
-    listen 80;
-    server_name gemercik.id;
-    root /var/www/gemercik/dist;
-    index index.html;
+---
 
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
+## 🔍 SEO Features
 
-    # Gzip compression
+- ✅ Meta tags (Open Graph, Twitter Cards)
+- ✅ JSON-LD structured data
+- ✅ Auto-generated sitemap
+- ✅ robots.txt configured
+- ✅ Semantic HTML5
+
+---
+
+## 📝 Key Files
+
+| File | Purpose |
+|------|---------|
+| `src/lib/i18n.ts` | Translation system |
+| `src/layouts/BaseLayout.astro` | Main layout |
+| `src/components/*.astro` | Page sections |
+| `public/robots.txt` | SEO directives |
+| `astro.config.mjs` | Astro configuration |
+
+---
+
+## 🐛 Known Issues (Non-Critical)
+
+Unused files with import errors (safe to ignore/delete):
+- `src/components/sections/*`
+- `src/components/ui/text/Text.astro`
+- `src/components/Navbar.astro`
+
+---
+
+## 📚 Documentation
+
+- [TRANSLATION-FIX.md](./TRANSLATION-FIX.md) - i18n implementation details
+- [PRODUCTION-READY.md](./PRODUCTION-READY.md) - Deployment checklist
+
+---
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Create feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit changes: `git commit -m 'Add AmazingFeature'`
+4. Push to branch: `git push origin feature/AmazingFeature`
+5. Open Pull Request
+
+---
+
+## 📧 Contact
+
+**Gemercik Solution**  
+Website: https://gemercik.id  
+Email: halo@gemercik.id  
+WhatsApp: +62 812-3456-7890
+
+---
+
+**License:** MIT
     gzip on;
     gzip_types text/css application/javascript image/svg+xml;
 }
