@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Light Mode Styles */
+  .light {
+    --color-bg: #ffffff;
+    --color-text: #0f172a;
+    --color-surface: #f8fafc;
+    --color-dark-950: #f8fafc;
+    --color-dark-900: #f1f5f9;
+    --color-dark-800: #e2e8f0;
+    --color-dark-700: #cbd5e1;
+    --color-dark-600: #94a3b8;
+    --color-dark-500: #64748b;
+    --color-dark-400: #475569;
+    --color-dark-300: #334155;
+    --color-dark-200: #1e293b;
+    --color-dark-100: #0f172a;
+    --color-dark-50: #020617;
+  }
+
+  .light body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* Dark Mode Styles (default) */
+  .dark {
+    --color-bg: #020617;
+    --color-text: #f8fafc;
+    --color-surface: #1e293b;
+  }
+
+  .dark body {
+    background-color: #020617 !important;
+    color: #f8fafc !important;
+  }
+}
+
+@theme {
+  /* Primary Colors - Digital Water */
+  --color-primary-50: #e0f4ff;
+  --color-primary-100: #bae9ff;
+  --color-primary-200: #7dd9ff;
+  --color-primary-300: #38c7ff;
+  --color-primary-400: #0ea5e9;
+  --color-primary-500: #0284c7;
+  --color-primary-600: #0369a1;
+  --color-primary-700: #075985;
+  --color-primary-800: #0c4a6e;
+  --color-primary-900: #082f49;
+  --color-primary: #0ea5e9;
+
+  /* Secondary Colors - Gold Innovation */
+  --color-secondary-50: #fff9e5;
+  --color-secondary-100: #fff3cc;
+  --color-secondary-200: #ffe799;
+  --color-secondary-300: #ffdb66;
+  --color-secondary-400: #ffcf33;
+  --color-secondary-500: #fbbf24;
+  --color-secondary-600: #f59e0b;
+  --color-secondary-700: #d97706;
+  --color-secondary-800: #b45309;
+  --color-secondary-900: #92400e;
+  --color-secondary: #fbbf24;
+
+  /* Dark Colors - Midnight Tech */
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+  --color-dark: #020617;
+
+  /* Font Families */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.6s ease-out forwards;
+  --animate-fade-up: fadeUp 0.6s ease-out forwards;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(14, 165, 233, 0.8),
+      0 0 30px rgba(251, 191, 36, 0.6);
+  }
+}
+
+/* Custom utilities */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-down {
+  animation: fadeDown 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
