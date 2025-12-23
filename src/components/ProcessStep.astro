@@ -1,0 +1,26 @@
+---
+interface Props {
+  numberKey: string;
+  number: string;
+  titleKey: string;
+  title: string;
+  descKey: string;
+  desc: string;
+}
+
+const { numberKey, number, titleKey, title, descKey, desc } = Astro.props;
+---
+
+<div class="group relative">
+  <!-- Number Badge -->
+  <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-linear-to-br from-primary-500/20 to-primary-600/20 dark:from-primary-500/20 dark:to-primary-600/20 light:from-primary-500/30 light:to-primary-600/30 mb-4 group-hover:scale-110 transition-transform duration-300">
+    <span class="text-2xl font-bold text-primary-400 dark:text-primary-400 light:text-primary-600" data-i18n={numberKey}>{number}</span>
+  </div>
+  
+  <!-- Content -->
+  <h3 class="text-xl font-heading font-bold text-white dark:text-white light:text-dark-900 mb-2" data-i18n={titleKey}>{title}</h3>
+  <p class="text-dark-300 dark:text-dark-300 light:text-dark-700 leading-relaxed" data-i18n={descKey}>{desc}</p>
+  
+  <!-- Connecting Line (only visible on larger screens) -->
+  <div class="hidden lg:block absolute top-7 left-full w-full h-0.5 bg-linear-to-r from-primary-500/50 to-transparent group-last:hidden"></div>
+</div>

@@ -1,0 +1,203 @@
+---
+import { t } from '../lib/i18n';
+
+const features = [
+  {
+    titleKey: 'about.feature1.title',
+    title: t('about.feature1.title'),
+    descKey: 'about.feature1.desc',
+    desc: t('about.feature1.desc'),
+    icon: 'target'
+  },
+  {
+    titleKey: 'about.feature2.title',
+    title: t('about.feature2.title'),
+    descKey: 'about.feature2.desc',
+    desc: t('about.feature2.desc'),
+    icon: 'ai'
+  },
+  {
+    titleKey: 'about.feature3.title',
+    title: t('about.feature3.title'),
+    descKey: 'about.feature3.desc',
+    desc: t('about.feature3.desc'),
+    icon: 'puzzle'
+  },
+  {
+    titleKey: 'about.feature4.title',
+    title: t('about.feature4.title'),
+    descKey: 'about.feature4.desc',
+    desc: t('about.feature4.desc'),
+    icon: 'support'
+  },
+];
+
+const stats = [
+  { numberKey: 'about.stat1.number', number: t('about.stat1.number'), labelKey: 'about.stat1.label', label: t('about.stat1.label') },
+  { numberKey: 'about.stat2.number', number: t('about.stat2.number'), labelKey: 'about.stat2.label', label: t('about.stat2.label') },
+  { numberKey: 'about.stat3.number', number: t('about.stat3.number'), labelKey: 'about.stat3.label', label: t('about.stat3.label') },
+  { numberKey: 'about.stat4.number', number: t('about.stat4.number'), labelKey: 'about.stat4.label', label: t('about.stat4.label') },
+];
+---
+
+<section id="about" class="relative py-20 lg:py-32 bg-linear-to from-primary-500 via-dark-900 to-secondary-500/20 overflow-hidden transition-colors duration-300">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary-400/3 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Main Content -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      
+      <!-- Left: Image/Visual -->
+      <div class="relative">
+        <div class="relative z-10 bg-linear-to-br from-dark-800 to-dark-900 dark:from-dark-800 dark:to-dark-900 light:from-gray-50 light:to-white rounded-2xl p-8 border border-dark-700 dark:border-dark-700 light:border-gray-200">
+          <div class="aspect-video bg-linear-to-br from-primary-500/20 to-secondary-500/20 dark:from-primary-500/20 dark:to-secondary-500/20 light:from-primary-500/30 light:to-secondary-500/30 rounded-xl flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-24 h-24 mx-auto mb-6 bg-linear-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center animate-float">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-heading font-bold text-white dark:text-white light:text-dark-900 mb-2">Gemercik Solution</h3>
+              <p class="text-dark-200 dark:text-dark-200 light:text-dark-600">Partner Digital Terpercaya</p>
+            </div>
+          </div>
+          
+          <!-- Stats Cards -->
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            {stats.slice(0, 2).map((stat) => (
+              <div class="bg-dark-950/50 dark:bg-dark-950/50 light:bg-white/80 rounded-lg p-4 text-center border border-dark-700 dark:border-dark-700 light:border-gray-200">
+                <div class="text-2xl font-bold text-primary-400 dark:text-primary-400 light:text-primary-600 mb-1" data-i18n={stat.numberKey}>{stat.number}</div>
+                <div class="text-sm text-dark-300 dark:text-dark-300 light:text-dark-700" data-i18n={stat.labelKey}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute -top-4 -right-4 w-32 h-32 bg-primary-500/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary-500/10 rounded-full blur-2xl"></div>
+      </div>
+
+      <!-- Right: Content -->
+      <div>
+        <div class="inline-block px-4 py-2 bg-primary-500/10 dark:bg-primary-500/10 light:bg-primary-500/20 border border-primary-500/20 dark:border-primary-500/20 light:border-primary-500/30 rounded-full mb-6">
+          <span class="text-primary-400 dark:text-primary-400 light:text-primary-600 text-sm font-semibold" data-i18n="about.badge">TENTANG KAMI</span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight">
+          <span data-i18n="about.title">Memajukan UMKM Melalui</span> <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-500" data-i18n="about.titleHighlight">Teknologi</span>
+        </h2>
+        
+        <p class="text-lg text-dark-200 mb-6 leading-relaxed" data-i18n="about.subtitle">
+          Gemercik Solution lahir dari visi untuk memberdayakan UMKM Indonesia dengan teknologi digital. 
+          Kami percaya bahwa setiap bisnis, besar atau kecil, berhak mendapatkan akses ke solusi teknologi 
+          berkualitas tinggi yang dapat mendorong pertumbuhan mereka.
+        </p>
+        
+        <p class="text-lg text-dark-200 mb-8 leading-relaxed">
+          Dengan fokus pada inovasi AI dan pengembangan aplikasi modern, kami membantu UMKM 
+          bertransformasi digital dan bersaing di pasar global. Semua yang Anda butuhkan untuk bertumbuh, 
+          ada pada Gemercik Solution.
+        </p>
+
+        <!-- Additional Stats -->
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          {stats.slice(2).map((stat) => (
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-lg bg-primary-500/10 dark:bg-primary-500/10 light:bg-primary-500/20 flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 text-primary-400 dark:text-primary-400 light:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xl font-bold text-white dark:text-white light:text-dark-900" data-i18n={stat.numberKey}>{stat.number}</div>
+                <div class="text-sm text-dark-300 dark:text-dark-300 light:text-dark-700" data-i18n={stat.labelKey}>{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a 
+          href="#contact" 
+          class="inline-flex items-center px-8 py-4 bg-linear-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary-500/50 group"
+          data-i18n="about.cta"
+        >
+          Mulai Transformasi Digital
+          <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Features Grid -->
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white mb-4" data-i18n="about.featuresTitle">
+          Mengapa Memilih Kami?
+        </h3>
+        <p class="text-dark-200" data-i18n="about.featuresSubtitle">Keunggulan yang membuat kami berbeda</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => (
+          <div 
+            class="text-center group"
+            style={`animation: fade-up 0.6s ease-out forwards; animation-delay: ${index * 0.1}s; opacity: 0;`}
+          >
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-linear-to-br from-primary-500/20 to-primary-600/20 dark:from-primary-500/20 dark:to-primary-600/20 light:from-primary-500/30 light:to-primary-600/30 mb-4 group-hover:scale-110 transition-transform duration-300">
+              {feature.icon === 'target' && (
+                <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+              )}
+              {feature.icon === 'ai' && (
+                <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              )}
+              {feature.icon === 'puzzle' && (
+                <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                </svg>
+              )}
+              {feature.icon === 'support' && (
+                <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              )}
+            </div>
+            <h4 class="text-xl font-heading font-bold text-white mb-2" data-i18n={feature.titleKey}>{feature.title}</h4>
+            <p class="text-dark-300 text-sm leading-relaxed" data-i18n={feature.descKey}>{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  import { initLanguage } from '../lib/i18n';
+  initLanguage();
+</script>
+
+<style>
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

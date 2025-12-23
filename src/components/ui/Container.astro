@@ -1,0 +1,43 @@
+---
+/**
+ * Container Component
+ * Responsive container with consistent max-width and padding
+ */
+
+import { cn } from "../../lib/cn";
+
+interface Props {
+  as?: string;
+  class?: string;
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  noPadding?: boolean;
+}
+
+const {
+  as: Tag = "div",
+  class: className,
+  size = "lg" as "sm" | "md" | "lg" | "xl" | "full",
+  noPadding = false,
+} = Astro.props;
+
+const sizeClasses: Record<"sm" | "md" | "lg" | "xl" | "full", string> = {
+  sm: "max-w-3xl",
+  md: "max-w-4xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+const sizeClass = sizeClasses[size];
+---
+
+<Tag
+  class={cn(
+    "mx-auto w-full",
+    sizeClass,
+    !noPadding && "px-6 md:px-8 lg:px-12",
+    className
+  )}
+>
+  <slot />
+</Tag>
