@@ -59,6 +59,7 @@ pnpm preview
 ### System Overview
 
 File: `src/lib/i18n.ts` contains:
+
 - 150+ translation keys
 - Indonesian (default) & English
 - Runtime language switching via data-i18n attributes
@@ -80,10 +81,11 @@ const titleKey = 'section.title';        // Key for data-i18n
 ### Adding Translations
 
 1. Edit `src/lib/i18n.ts`:
+
 ```typescript
 export const translations = {
-  id: { 'key': 'Teks Indonesia' },
-  en: { 'key': 'English Text' }
+  id: { key: "Teks Indonesia" },
+  en: { key: "English Text" },
 };
 ```
 
@@ -96,11 +98,13 @@ export const translations = {
 ## 🎨 Design System
 
 **Colors:**
+
 - Primary: `#0EA5E9` (Sky/Cyan)
 - Secondary: `#F59E0B` (Amber/Gold)
 - Gradients: Blue to Yellow throughout
 
 **Components:**
+
 - Hero with animated background
 - Services grid with hover effects
 - About section with stats
@@ -123,19 +127,20 @@ export const translations = {
 
 ## 📝 Key Files
 
-| File | Purpose |
-|------|---------|
-| `src/lib/i18n.ts` | Translation system |
-| `src/layouts/BaseLayout.astro` | Main layout |
-| `src/components/*.astro` | Page sections |
-| `public/robots.txt` | SEO directives |
-| `astro.config.mjs` | Astro configuration |
+| File                           | Purpose             |
+| ------------------------------ | ------------------- |
+| `src/lib/i18n.ts`              | Translation system  |
+| `src/layouts/BaseLayout.astro` | Main layout         |
+| `src/components/*.astro`       | Page sections       |
+| `public/robots.txt`            | SEO directives      |
+| `astro.config.mjs`             | Astro configuration |
 
 ---
 
 ## 🐛 Known Issues (Non-Critical)
 
 Unused files with import errors (safe to ignore/delete):
+
 - `src/components/sections/*`
 - `src/components/ui/text/Text.astro`
 - `src/components/Navbar.astro`
@@ -169,9 +174,10 @@ WhatsApp: +62 812-3456-7890
 ---
 
 **License:** MIT
-    gzip on;
-    gzip_types text/css application/javascript image/svg+xml;
+gzip on;
+gzip_types text/css application/javascript image/svg+xml;
 }
+
 ```
 
 ---
@@ -179,47 +185,49 @@ WhatsApp: +62 812-3456-7890
 ## 📁 Struktur Project
 
 ```
+
 landing-page/
-├── public/                 # Static assets
-│   ├── images/            # Images, logos, icons
-│   ├── robots.txt         # Robots crawler config
-│   └── favicon.svg        # Favicon
+├── public/ # Static assets
+│ ├── images/ # Images, logos, icons
+│ ├── robots.txt # Robots crawler config
+│ └── favicon.svg # Favicon
 │
 ├── src/
-│   ├── components/        # Astro components
-│   │   ├── Hero.astro
-│   │   ├── Services.astro
-│   │   ├── About.astro
-│   │   ├── Process.astro
-│   │   ├── Testimonials.astro
-│   │   ├── FAQ.astro
-│   │   ├── Contact.astro
-│   │   ├── CTA.astro
-│   │   ├── Footer.astro
-│   │   ├── Header.astro
-│   │   ├── Button.astro
-│   │   └── FloatingButtons.astro
-│   │
-│   ├── layouts/           # Layout components
-│   │   └── BaseLayout.astro
-│   │
-│   ├── lib/              # Utilities & helpers
-│   │   └── i18n.ts       # Internationalization system
-│   │
-│   ├── pages/            # Routes (file-based routing)
-│   │   ├── index.astro   # Homepage
-│   │   └── api/
-│   │       └── hello.json.ts
-│   │
-│   └── styles/           # Global styles
-│       └── globals.css   # Tailwind + custom CSS
+│ ├── components/ # Astro components
+│ │ ├── Hero.astro
+│ │ ├── Services.astro
+│ │ ├── About.astro
+│ │ ├── Process.astro
+│ │ ├── Testimonials.astro
+│ │ ├── FAQ.astro
+│ │ ├── Contact.astro
+│ │ ├── CTA.astro
+│ │ ├── Footer.astro
+│ │ ├── Header.astro
+│ │ ├── Button.astro
+│ │ └── FloatingButtons.astro
+│ │
+│ ├── layouts/ # Layout components
+│ │ └── BaseLayout.astro
+│ │
+│ ├── lib/ # Utilities & helpers
+│ │ └── i18n.ts # Internationalization system
+│ │
+│ ├── pages/ # Routes (file-based routing)
+│ │ ├── index.astro # Homepage
+│ │ └── api/
+│ │ └── hello.json.ts
+│ │
+│ └── styles/ # Global styles
+│ └── globals.css # Tailwind + custom CSS
 │
-├── astro.config.mjs      # Astro configuration
-├── tailwind.config.ts    # Tailwind configuration
-├── tsconfig.json         # TypeScript config
-├── package.json          # Dependencies
-└── README.md             # This file
-```
+├── astro.config.mjs # Astro configuration
+├── tailwind.config.ts # Tailwind configuration
+├── tsconfig.json # TypeScript config
+├── package.json # Dependencies
+└── README.md # This file
+
+````
 
 ---
 
@@ -247,7 +255,7 @@ export const translations = {
     // ...
   },
 };
-```
+````
 
 ### Usage in Components
 
