@@ -206,3 +206,21 @@
 .animate-glow {
   animation: glow 2s ease-in-out infinite alternate;
 }
+
+/* Performance: respect reduced motion & reduce paint cost on mobile */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-glow,
+  .animate-fade-up,
+  .animate-fade-down,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-scale-in {
+    animation: none;
+  }
+}
+
+/* Isolate animated layers to reduce repaint (mobile performance) */
+.animate-float {
+  contain: layout style;
+}

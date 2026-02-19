@@ -63,6 +63,8 @@ export const translations = {
       "Kami percaya bahwa setiap bisnis, tidak peduli seberapa kecil, berhak mendapatkan akses ke teknologi terbaik.",
     "about.description2":
       "Dengan tim profesional dan berpengalaman, kami telah membantu puluhan UMKM mencapai transformasi digital mereka.",
+    "about.description3":
+      "Dengan fokus pada inovasi AI dan pengembangan aplikasi modern, kami membantu UMKM bertransformasi digital dan bersaing di pasar global. Semua yang Anda butuhkan untuk bertumbuh, ada pada Gemercik Solution.",
     "about.cta": "Pelajari Lebih Lanjut",
     "about.featuresTitle": "Mengapa Memilih Kami?",
     "about.featuresSubtitle": "Keunggulan yang membuat kami berbeda",
@@ -286,6 +288,8 @@ export const translations = {
       "We believe that every business, no matter how small, deserves access to the best technology.",
     "about.description2":
       "With a professional and experienced team, we have helped dozens of SMEs achieve their digital transformation.",
+    "about.description3":
+      "With a focus on AI innovation and modern application development, we help SMEs digitally transform and compete in the global market. Everything you need to grow is here at Gemercik Solution.",
     "about.cta": "Learn More",
     "about.featuresTitle": "Why Choose Us?",
     "about.featuresSubtitle": "Advantages that make us different",

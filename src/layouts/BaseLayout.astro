@@ -107,10 +107,8 @@ const structuredData = {
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    
+    <!-- Fonts are bundled via @fontsource-variable; no external font requests -->
+
     <!-- Prevent FOUC (Flash of Unstyled Content) -->
     <script is:inline>
       const theme = localStorage.getItem('theme') || 'dark';
@@ -119,5 +117,9 @@ const structuredData = {
   </head>
   <body class="font-sans antialiased bg-gradient-to from-primary-500 via-dark-900 to-secondary-500/20 text-dark-50 transition-colors duration-300">
     <slot />
+    <script>
+      import { initLanguage } from '../lib/i18n';
+      initLanguage();
+    </script>
   </body>
 </html>
