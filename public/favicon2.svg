@@ -1,0 +1,33 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradOnly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="25" cy="25" r="23" fill="url(#logoGradOnly)" opacity="0.1" filter="url(#glow)"/>
+  
+  <!-- Water Drop Shape -->
+  <path d="M25 12 C17 22, 17 30, 25 38 C33 30, 33 22, 25 12 Z" fill="url(#logoGradOnly)"/>
+  
+  <!-- Tech Circuit Lines -->
+  <line x1="13" y1="25" x2="18" y2="25" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+  <line x1="32" y1="25" x2="37" y2="25" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+  <line x1="25" y1="13" x2="25" y2="18" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+  <line x1="25" y1="32" x2="25" y2="37" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Tech Nodes -->
+  <circle cx="13" cy="25" r="2.5" fill="#FBBF24"/>
+  <circle cx="37" cy="25" r="2.5" fill="#FBBF24"/>
+  <circle cx="25" cy="13" r="2.5" fill="#0EA5E9"/>
+  <circle cx="25" cy="37" r="2.5" fill="#0EA5E9"/>
+</svg>

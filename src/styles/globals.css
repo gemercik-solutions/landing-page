@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @layer base {
+
   /* Light Mode Styles */
   .light {
     --color-bg: #ffffff;
@@ -93,6 +94,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -103,6 +105,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -114,6 +117,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -125,6 +129,7 @@
     opacity: 0;
     transform: translateX(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -136,6 +141,7 @@
     opacity: 0;
     transform: translateX(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -147,6 +153,7 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -154,10 +161,12 @@
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -167,6 +176,7 @@
   0% {
     box-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
   }
+
   100% {
     box-shadow:
       0 0 20px rgba(14, 165, 233, 0.8),
@@ -209,6 +219,7 @@
 
 /* Performance: respect reduced motion & reduce paint cost on mobile */
 @media (prefers-reduced-motion: reduce) {
+
   .animate-float,
   .animate-glow,
   .animate-fade-up,

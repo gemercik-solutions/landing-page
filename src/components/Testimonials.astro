@@ -1,115 +1,102 @@
 ---
+import { testimonials } from "../constants/testimonials";
 ---
 
-<section class="relative py-20 bg-linear-to-br from-primary-500 via-dark-900 to-secondary-500/20 overflow-hidden">
+<section
+  class="relative py-20 bg-linear-to-br from-primary-500 via-dark-900 to-secondary-500/20 overflow-hidden"
+>
   <!-- Animated Background -->
   <div class="absolute inset-0">
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e905_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e905_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e905_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e905_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
+    >
+    </div>
   </div>
 
   <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
-      
       <!-- Testimonials Section Header -->
-      <div class="inline-block px-4 py-2 bg-primary-500/10 dark:bg-primary-500/10 light:bg-primary-500/20 border border-primary-500/20 dark:border-primary-500/20 light:border-primary-500/30 rounded-full mb-6">
-        <span class="text-primary-400 dark:text-primary-400 light:text-primary-600 text-sm font-semibold" data-i18n="testimonials.badge">TESTIMONI KLIEN</span>
+      <div
+        class="inline-block px-4 py-2 bg-primary-500/10 dark:bg-primary-500/10 light:bg-primary-500/20 border border-primary-500/20 dark:border-primary-500/20 light:border-primary-500/30 rounded-full mb-6"
+      >
+        <span
+          class="text-primary-400 dark:text-primary-400 light:text-primary-600 text-sm font-semibold"
+          data-i18n="testimonials.badge">TESTIMONI KLIEN</span
+        >
       </div>
-      
+
       <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
-        <span data-i18n="testimonials.title1">Apa Kata</span> <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-500" data-i18n="testimonials.title2">Mereka</span>
+        <span data-i18n="testimonials.title1">Apa Kata</span>
+        <span
+          class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-500"
+          data-i18n="testimonials.title2">Mereka</span
+        >
       </h2>
-      
+
       <p class="text-lg text-dark-200 mb-12" data-i18n="testimonials.subtitle">
         Cerita sukses dari UMKM yang telah bertransformasi bersama kami
       </p>
 
       <!-- Testimonials Grid -->
       <div class="grid md:grid-cols-3 gap-8">
-        
-        <!-- Testimonial 1 -->
-        <div class="bg-dark-800/50 dark:bg-dark-800/50 light:bg-white/80 backdrop-blur-sm border border-dark-700 dark:border-dark-700 light:border-gray-200 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-linear-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white font-bold text-lg mr-3">
-              B
+        {
+          testimonials.map((testimonial) => (
+            <div class="bg-dark-800/50 dark:bg-dark-800/50 light:bg-white/80 backdrop-blur-sm border border-dark-700 dark:border-dark-700 light:border-gray-200 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300">
+              <div class="flex items-center mb-4">
+                <div
+                  class={`w-12 h-12 rounded-full bg-linear-to-br ${testimonial.color} flex items-center justify-center text-white font-bold text-lg mr-3`}
+                >
+                  {testimonial.initial}
+                </div>
+                <div class="text-left">
+                  <h4
+                    class="text-white dark:text-white light:text-dark-900 font-semibold"
+                    data-i18n={testimonial.nameKey}
+                  >
+                    {testimonial.name}
+                  </h4>
+                  <p
+                    class="text-dark-400 dark:text-dark-400 light:text-dark-500 text-sm"
+                    data-i18n={testimonial.roleKey}
+                  >
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                {[...Array(5)].map(() => (
+                  <svg
+                    class="w-5 h-5 text-secondary-400 dark:text-secondary-400 light:text-secondary-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p
+                class="text-dark-200 dark:text-dark-200 light:text-dark-700 text-sm leading-relaxed"
+                data-i18n={testimonial.textKey}
+              >
+                "{testimonial.text}"
+              </p>
             </div>
-            <div class="text-left">
-              <h4 class="text-white dark:text-white light:text-dark-900 font-semibold" data-i18n="testimonials.client1.name">Budi Santoso</h4>
-              <p class="text-dark-400 dark:text-dark-400 light:text-dark-500 text-sm" data-i18n="testimonials.client1.role">Owner, Warung Makan Bu Siti</p>
-            </div>
-          </div>
-          <div class="flex mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-secondary-400 dark:text-secondary-400 light:text-secondary-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <p class="text-dark-200 dark:text-dark-200 light:text-dark-700 text-sm leading-relaxed" data-i18n="testimonials.client1.text">
-            "Website dan sistem order online dari Gemercik Solution meningkatkan penjualan kami 300%! Sekarang pelanggan bisa pesan dari rumah."
-          </p>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="bg-dark-800/50 dark:bg-dark-800/50 light:bg-white/80 backdrop-blur-sm border border-dark-700 dark:border-dark-700 light:border-gray-200 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-linear-to-br from-secondary-500 to-secondary-600 flex items-center justify-center text-white font-bold text-lg mr-3">
-              S
-            </div>
-            <div class="text-left">
-              <h4 class="text-white dark:text-white light:text-dark-900 font-semibold" data-i18n="testimonials.client2.name">Siti Rahma</h4>
-              <p class="text-dark-400 dark:text-dark-400 light:text-dark-500 text-sm" data-i18n="testimonials.client2.role">Founder, Batik Nusantara</p>
-            </div>
-          </div>
-          <div class="flex mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-secondary-400 dark:text-secondary-400 light:text-secondary-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <p class="text-dark-200 dark:text-dark-200 light:text-dark-700 text-sm leading-relaxed" data-i18n="testimonials.client2.text">
-            "Aplikasi mobile untuk toko batik kami sangat membantu. Customer bisa lihat katalog dan bayar langsung. Profesional sekali!"
-          </p>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="bg-dark-800/50 dark:bg-dark-800/50 light:bg-white/80 backdrop-blur-sm border border-dark-700 dark:border-dark-700 light:border-gray-200 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 rounded-full bg-linear-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-              A
-            </div>
-            <div class="text-left">
-              <h4 class="text-white dark:text-white light:text-dark-900 font-semibold" data-i18n="testimonials.client3.name">Ahmad Fauzi</h4>
-              <p class="text-dark-400 dark:text-dark-400 light:text-dark-500 text-sm" data-i18n="testimonials.client3.role">CEO, Kerajinan Kayu Jati</p>
-            </div>
-          </div>
-          <div class="flex mb-3">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-secondary-400 dark:text-secondary-400 light:text-secondary-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <p class="text-dark-200 dark:text-dark-200 light:text-dark-700 text-sm leading-relaxed" data-i18n="testimonials.client3.text">
-            "AI chatbot untuk customer service sangat membantu bisnis kami. Bisa melayani 24/7 tanpa henti. Luar biasa!"
-          </p>
-        </div>
-
+          ))
+        }
       </div>
 
       <!-- Trusted By Section -->
       <!-- <div class="mt-16 pt-12 border-t border-dark-800 dark:border-dark-800 light:border-gray-200">
         <p class="text-dark-400 dark:text-dark-400 light:text-dark-500 text-sm mb-8" data-i18n="testimonials.trustedBy">Dipercaya oleh 50+ UMKM di Indonesia</p>
         <div class="flex flex-wrap justify-center items-center gap-8 grayscale opacity-50"> -->
-          <!-- Logo placeholders -->
-          <!-- <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
+      <!-- Logo placeholders -->
+      <!-- <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
           <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
           <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
           <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
           <div class="w-24 h-12 bg-dark-800 dark:bg-dark-800 light:bg-gray-200 rounded-lg"></div>
         </div>
       </div> -->
-
     </div>
   </div>
 </section>

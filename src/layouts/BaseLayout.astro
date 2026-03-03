@@ -1,7 +1,7 @@
 ---
-import '../styles/globals.css';
-import '@fontsource-variable/inter';
-import '@fontsource-variable/plus-jakarta-sans';
+import "../styles/globals.css";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/plus-jakarta-sans";
 
 interface Props {
   title?: string;
@@ -12,53 +12,53 @@ interface Props {
 }
 
 const {
-  title = 'Gemercik Solution | Teknologi untuk UMKM Indonesia',
-  description = 'Solusi teknologi terpercaya untuk UMKM. Kami menyediakan layanan Fullstack Development, Mobile Development, Website Development, dan AI Solutions untuk memajukan bisnis Anda.',
-  image = 'https://gemercik.id/images/og-image.png',
-  url = 'https://gemercik.id',
-  keywords = 'gemercik solution, umkm, teknologi, fullstack development, mobile development, ai solutions, website development, digital transformation, indonesia, web development, mobile apps, chatbot ai, automation',
+  title = "Gemercik Solution | Teknologi untuk UMKM Indonesia",
+  description = "Solusi teknologi terpercaya untuk UMKM. Kami menyediakan layanan Fullstack Development, Mobile Development, Website Development, dan AI Solutions untuk memajukan bisnis Anda.",
+  image = "https://gemercik.id/images/og-image.png",
+  url = "https://gemercik.id",
+  keywords = "gemercik solution, umkm, teknologi, fullstack development, mobile development, ai solutions, website development, digital transformation, indonesia, web development, mobile apps, chatbot ai, automation",
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || url);
 
 // JSON-LD Structured Data
 const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Gemercik Solution',
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Gemercik Solution",
   url: url,
   logo: `${url}/images/logo.svg`,
   description: description,
   address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Digital Hub, Level 5, Green Office Park',
-    addressLocality: 'BSD City',
-    addressRegion: 'Tangerang',
-    addressCountry: 'ID',
+    "@type": "PostalAddress",
+    streetAddress: "Digital Hub, Level 5, Green Office Park",
+    addressLocality: "BSD City",
+    addressRegion: "Tangerang",
+    addressCountry: "ID",
   },
   contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+62-812-3456-7890',
-    contactType: 'Customer Service',
-    email: 'halo@gemercik.id',
-    availableLanguage: ['Indonesian', 'English'],
+    "@type": "ContactPoint",
+    telephone: "+62-812-3456-7890",
+    contactType: "Customer Service",
+    email: "halo@gemercik.id",
+    availableLanguage: ["Indonesian", "English"],
   },
   sameAs: [
-    'https://wa.me/6281234567890',
-    'https://instagram.com/gemercik.solution',
-    'https://linkedin.com/company/gemercik-solution',
+    "https://wa.me/6281234567890",
+    "https://instagram.com/gemercik.solution",
+    "https://linkedin.com/company/gemercik-solution",
   ],
-  priceRange: '$$',
+  priceRange: "$$",
   areaServed: {
-    '@type': 'Country',
-    name: 'Indonesia',
+    "@type": "Country",
+    name: "Indonesia",
   },
   founder: {
-    '@type': 'Organization',
-    name: 'Gemercik Solution Team',
+    "@type": "Organization",
+    name: "Gemercik Solution Team",
   },
-  foundingDate: '2020',
-  slogan: 'Semua Yang Anda Butuhkan Untuk Bertumbuh',
+  foundingDate: "2020",
+  slogan: "Semua Yang Anda Butuhkan Untuk Bertumbuh",
 };
 ---
 
@@ -68,17 +68,20 @@ const structuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon2.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Gemercik Solution" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -89,7 +92,7 @@ const structuredData = {
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Gemercik Solution" />
     <meta property="og:locale" content="id_ID" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
@@ -97,28 +100,36 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     <meta name="twitter:creator" content="@gemercik_solution" />
-    
+
     <!-- Additional Meta Tags -->
     <meta name="theme-color" content="#0EA5E9" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="format-detection" content="telephone=no" />
-    
+
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+
     <!-- Fonts are bundled via @fontsource-variable; no external font requests -->
 
     <!-- Prevent FOUC (Flash of Unstyled Content) -->
     <script is:inline>
-      const theme = localStorage.getItem('theme') || 'dark';
+      const theme = localStorage.getItem("theme") || "dark";
       document.documentElement.classList.add(theme);
     </script>
   </head>
-  <body class="font-sans antialiased bg-gradient-to from-primary-500 via-dark-900 to-secondary-500/20 text-dark-50 transition-colors duration-300">
+  <body
+    class="font-sans antialiased bg-gradient-to from-primary-500 via-dark-900 to-secondary-500/20 text-dark-50 transition-colors duration-300"
+  >
     <slot />
     <script>
-      import { initLanguage } from '../lib/i18n';
+      import { initLanguage } from "../lib/i18n";
       initLanguage();
     </script>
   </body>

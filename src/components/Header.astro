@@ -1,14 +1,17 @@
 ---
 const navLinks = [
-  { name: 'Beranda', nameEn: 'Home', href: '#hero' },
-  { name: 'Layanan', nameEn: 'Services', href: '#services' },
-  { name: 'Tentang Kami', nameEn: 'About', href: '#about' },
-  { name: 'FAQ', nameEn: 'FAQ', href: '#faq' },
-  { name: 'Kontak', nameEn: 'Contact', href: '#contact' },
+  { name: "Beranda", nameEn: "Home", href: "#hero" },
+  { name: "Layanan", nameEn: "Services", href: "#services" },
+  { name: "Tentang Kami", nameEn: "About", href: "#about" },
+  { name: "FAQ", nameEn: "FAQ", href: "#faq" },
+  { name: "Kontak", nameEn: "Contact", href: "#contact" },
 ];
 ---
 
-<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
@@ -25,37 +28,61 @@ const navLinks = [
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        {navLinks.map((link) => (
-          <a 
-            href={link.href} 
-            class="nav-link text-dark-100 dark:text-dark-100 light:text-dark-900 hover:text-primary-400 font-medium transition-colors duration-300 relative group"
-            data-id={link.name}
-            data-en={link.nameEn}
-          >
-            <span class="nav-text">{link.name}</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        ))}
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="nav-link text-dark-100 dark:text-dark-100 light:text-dark-900 hover:text-primary-400 font-medium transition-colors duration-300 relative group"
+              data-id={link.name}
+              data-en={link.nameEn}
+            >
+              <span class="nav-text">{link.name}</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))
+        }
       </div>
 
       <!-- Controls: Theme + Language -->
       <div class="hidden md:flex items-center space-x-3">
         <!-- Theme Toggle -->
-        <button 
+        <button
           id="theme-toggle"
           class="w-10 h-10 rounded-lg bg-dark-800/50 dark:bg-dark-800/50 light:bg-gray-200 hover:bg-dark-700 dark:hover:bg-dark-700 light:hover:bg-gray-300 flex items-center justify-center transition-all duration-300 border border-dark-700 dark:border-dark-700 light:border-gray-300"
           aria-label="Toggle theme"
         >
-          <svg id="theme-icon-sun" class="w-5 h-5 text-primary-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          <svg
+            id="theme-icon-sun"
+            class="w-5 h-5 text-primary-400 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
           </svg>
-          <svg id="theme-icon-moon" class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          <svg
+            id="theme-icon-moon"
+            class="w-5 h-5 text-primary-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path>
           </svg>
         </button>
 
         <!-- Language Toggle -->
-        <button 
+        <button
           id="lang-toggle"
           class="h-10 px-4 rounded-lg bg-dark-800/50 dark:bg-dark-800/50 light:bg-gray-200 hover:bg-dark-700 dark:hover:bg-dark-700 light:hover:bg-gray-300 flex items-center justify-center transition-all duration-300 border border-dark-700 dark:border-dark-700 light:border-gray-300 text-primary-400 font-semibold text-sm"
           aria-label="Toggle language"
@@ -71,11 +98,31 @@ const navLinks = [
           class="w-10 h-10 rounded-lg bg-dark-800/50 dark:bg-dark-800/50 light:bg-gray-200 hover:bg-dark-700 dark:hover:bg-dark-700 light:hover:bg-gray-300 flex items-center justify-center transition-all"
           aria-label="Toggle theme"
         >
-          <svg class="theme-icon-sun w-5 h-5 text-primary-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          <svg
+            class="theme-icon-sun w-5 h-5 text-primary-400 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
           </svg>
-          <svg class="theme-icon-moon w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          <svg
+            class="theme-icon-moon w-5 h-5 text-primary-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path>
           </svg>
         </button>
         <button
@@ -92,112 +139,124 @@ const navLinks = [
 
 <script>
   // Navbar scroll effect
-  const header = document.getElementById('header');
+  const header = document.getElementById("header");
   let lastScroll = 0;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
-      header?.classList.add('bg-dark-950/95', 'backdrop-blur-md', 'shadow-lg');
+      header?.classList.add("bg-dark-950/95", "backdrop-blur-md", "shadow-lg");
     } else {
-      header?.classList.remove('bg-dark-950/95', 'backdrop-blur-md', 'shadow-lg');
+      header?.classList.remove(
+        "bg-dark-950/95",
+        "backdrop-blur-md",
+        "shadow-lg",
+      );
     }
-    
+
     lastScroll = currentScroll;
   });
 
   // Theme Toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeToggleMobile = document.getElementById("theme-toggle-mobile");
   const html = document.documentElement;
-  
-  const sunIcons = document.querySelectorAll('.theme-icon-sun, #theme-icon-sun');
-  const moonIcons = document.querySelectorAll('.theme-icon-moon, #theme-icon-moon');
-  
+
+  const sunIcons = document.querySelectorAll(
+    ".theme-icon-sun, #theme-icon-sun",
+  );
+  const moonIcons = document.querySelectorAll(
+    ".theme-icon-moon, #theme-icon-moon",
+  );
+
   function updateThemeIcons(isDark: boolean) {
-    sunIcons.forEach(icon => {
+    sunIcons.forEach((icon) => {
       if (isDark) {
-        icon.classList.remove('hidden');
+        icon.classList.remove("hidden");
       } else {
-        icon.classList.add('hidden');
+        icon.classList.add("hidden");
       }
     });
-    moonIcons.forEach(icon => {
+    moonIcons.forEach((icon) => {
       if (isDark) {
-        icon.classList.add('hidden');
+        icon.classList.add("hidden");
       } else {
-        icon.classList.remove('hidden');
+        icon.classList.remove("hidden");
       }
     });
   }
 
   function toggleTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    localStorage.setItem('theme', newTheme);
-    html.classList.remove('light', 'dark');
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", newTheme);
+    html.classList.remove("light", "dark");
     html.classList.add(newTheme);
-    updateThemeIcons(newTheme === 'dark');
-    
+    updateThemeIcons(newTheme === "dark");
+
     // Dispatch event for other components
-    window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
+    window.dispatchEvent(
+      new CustomEvent("themeChanged", { detail: { theme: newTheme } }),
+    );
   }
 
   // Initialize theme
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedTheme = localStorage.getItem("theme") || "dark";
   html.classList.add(savedTheme);
-  updateThemeIcons(savedTheme === 'dark');
+  updateThemeIcons(savedTheme === "dark");
 
-  themeToggle?.addEventListener('click', toggleTheme);
-  themeToggleMobile?.addEventListener('click', toggleTheme);
+  themeToggle?.addEventListener("click", toggleTheme);
+  themeToggleMobile?.addEventListener("click", toggleTheme);
 
   // Language Toggle
-  const langToggle = document.getElementById('lang-toggle');
-  const langToggleMobile = document.getElementById('lang-toggle-mobile');
-  const langTexts = document.querySelectorAll('#lang-text, .lang-text');
-  
+  const langToggle = document.getElementById("lang-toggle");
+  const langToggleMobile = document.getElementById("lang-toggle-mobile");
+  const langTexts = document.querySelectorAll("#lang-text, .lang-text");
+
   function toggleLanguage() {
-    const currentLang = localStorage.getItem('language') || 'id';
-    const newLang = currentLang === 'id' ? 'en' : 'id';
-    
-    localStorage.setItem('language', newLang);
-    langTexts.forEach(text => {
+    const currentLang = localStorage.getItem("language") || "id";
+    const newLang = currentLang === "id" ? "en" : "id";
+
+    localStorage.setItem("language", newLang);
+    langTexts.forEach((text) => {
       text.textContent = newLang.toUpperCase();
     });
-    
+
     // Update nav links
-    document.querySelectorAll('.nav-link').forEach(link => {
-      const textSpan = link.querySelector('.nav-text');
-      const dataId = link.getAttribute('data-id');
-      const dataEn = link.getAttribute('data-en');
-      
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      const textSpan = link.querySelector(".nav-text");
+      const dataId = link.getAttribute("data-id");
+      const dataEn = link.getAttribute("data-en");
+
       if (textSpan && dataId && dataEn) {
-        textSpan.textContent = newLang === 'id' ? dataId : dataEn;
+        textSpan.textContent = newLang === "id" ? dataId : dataEn;
       }
     });
-    
+
     // Dispatch event for other components
-    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: newLang } }));
+    window.dispatchEvent(
+      new CustomEvent("languageChanged", { detail: { language: newLang } }),
+    );
   }
 
   // Initialize language
-  const savedLang = localStorage.getItem('language') || 'id';
-  langTexts.forEach(text => {
+  const savedLang = localStorage.getItem("language") || "id";
+  langTexts.forEach((text) => {
     text.textContent = savedLang.toUpperCase();
   });
-  
-  if (savedLang === 'en') {
-    document.querySelectorAll('.nav-link').forEach(link => {
-      const textSpan = link.querySelector('.nav-text');
-      const dataEn = link.getAttribute('data-en');
+
+  if (savedLang === "en") {
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      const textSpan = link.querySelector(".nav-text");
+      const dataEn = link.getAttribute("data-en");
       if (textSpan && dataEn) {
         textSpan.textContent = dataEn;
       }
     });
   }
 
-  langToggle?.addEventListener('click', toggleLanguage);
-  langToggleMobile?.addEventListener('click', toggleLanguage);
+  langToggle?.addEventListener("click", toggleLanguage);
+  langToggleMobile?.addEventListener("click", toggleLanguage);
 </script>

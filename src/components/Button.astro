@@ -1,26 +1,30 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
   href?: string;
   class?: string;
   [key: string]: any;
 }
 
-const { 
-  variant = 'primary', 
-  size = 'md', 
+const {
+  variant = "primary",
+  size = "md",
   href,
-  class: className = '',
-  ...rest 
+  class: className = "",
+  ...rest
 } = Astro.props;
 
-const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-400 disabled:opacity-50 disabled:cursor-not-allowed";
+const baseStyles =
+  "inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-400 disabled:opacity-50 disabled:cursor-not-allowed";
 
 const variants = {
-  primary: "bg-linear-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl hover:shadow-primary-500/50",
-  secondary: "bg-linear-to-r from-secondary-500 to-secondary-600 text-dark-900 hover:from-secondary-600 hover:to-secondary-700 shadow-lg hover:shadow-xl hover:shadow-secondary-500/50",
-  outline: "border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white",
+  primary:
+    "bg-linear-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl hover:shadow-primary-500/50",
+  secondary:
+    "bg-linear-to-r from-secondary-500 to-secondary-600 text-dark-900 hover:from-secondary-600 hover:to-secondary-700 shadow-lg hover:shadow-xl hover:shadow-secondary-500/50",
+  outline:
+    "border-2 border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white",
   ghost: "text-dark-100 hover:bg-dark-800 hover:text-white",
 };
 
@@ -32,7 +36,7 @@ const sizes = {
 
 const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
-const Tag = href ? 'a' : 'button';
+const Tag = href ? "a" : "button";
 ---
 
 <Tag href={href} class={classes} {...rest}>

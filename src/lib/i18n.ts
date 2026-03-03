@@ -88,6 +88,7 @@ export const translations = {
     "about.stat3.label": "ROI Rata-rata",
     "about.stat4.number": "100%",
     "about.stat4.label": "Komitmen Kualitas",
+    "about.stats.card": "Partner Digital Terpercaya",
 
     // Process Section
     "process.badge": "PROSES KERJA",
@@ -313,6 +314,7 @@ export const translations = {
     "about.stat3.label": "Average ROI",
     "about.stat4.number": "100%",
     "about.stat4.label": "Quality Commitment",
+    "about.stats.card": "Trusted Digital Partners",
 
     // Process Section
     "process.badge": "OUR PROCESS",

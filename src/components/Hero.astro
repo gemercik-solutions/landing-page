@@ -1,115 +1,238 @@
 ---
-import Button from './Button.astro';
+import Button from "./Button.astro";
 ---
 
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to from-primary-500 via-dark-900 to-secondary-500/20 transition-colors duration-300">
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to from-primary-500 via-dark-900 to-secondary-500/20 transition-colors duration-300"
+>
   <!-- Premium Animated Background -->
   <div class="absolute inset-0 overflow-hidden">
     <!-- Multiple Gradient Orbs for depth -->
-    <div class="absolute top-1/4 -left-32 w-150 h-150 bg-primary-500/30 rounded-full blur-[120px] animate-float"></div>
-    <div class="absolute bottom-1/4 -right-32 w-150 h-150 bg-secondary-500/30 rounded-full blur-[120px] animate-float" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-primary-400/10 rounded-full blur-[150px] animate-float" style="animation-delay: 2s;"></div>
-    
+    <div
+      class="absolute top-1/4 -left-32 w-150 h-150 bg-primary-500/30 rounded-full blur-[120px] animate-float"
+    >
+    </div>
+    <div
+      class="absolute bottom-1/4 -right-32 w-150 h-150 bg-secondary-500/30 rounded-full blur-[120px] animate-float"
+      style="animation-delay: 1s;"
+    >
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-primary-400/10 rounded-full blur-[150px] animate-float"
+      style="animation-delay: 2s;"
+    >
+    </div>
+
     <!-- Mesh Gradient Overlay -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(2,6,23,0.8)_100%)]"></div>
-    
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(2,6,23,0.8)_100%)]"
+    >
+    </div>
+
     <!-- Animated Grid Pattern -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e915_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e915_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)]"></div>
-    
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e915_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e915_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)]"
+    >
+    </div>
+
     <!-- Glowing Lines -->
-    <div class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-primary-500/50 dark:via-primary-500/50 light:via-primary-500/40 to-transparent"></div>
-    <div class="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-secondary-500/50 dark:via-secondary-500/50 light:via-secondary-500/40 to-transparent"></div>
-    
+    <div
+      class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-primary-500/50 dark:via-primary-500/50 light:via-primary-500/40 to-transparent"
+    >
+    </div>
+    <div
+      class="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-secondary-500/50 dark:via-secondary-500/50 light:via-secondary-500/40 to-transparent"
+    >
+    </div>
+
     <!-- Glass Effect Panels -->
-    <div class="absolute top-20 left-10 w-64 h-64 bg-primary-500/5 dark:bg-primary-500/5 light:bg-primary-500/10 backdrop-blur-3xl rounded-3xl rotate-12 border border-primary-500/10 dark:border-primary-500/10 light:border-primary-500/30"></div>
-    <div class="absolute bottom-20 right-10 w-80 h-80 bg-secondary-500/5 dark:bg-secondary-500/5 light:bg-secondary-500/10 backdrop-blur-3xl rounded-3xl -rotate-12 border border-secondary-500/10 dark:border-secondary-500/10 light:border-secondary-500/30"></div>
+    <div
+      class="absolute top-20 left-10 w-64 h-64 bg-primary-500/5 dark:bg-primary-500/5 light:bg-primary-500/10 backdrop-blur-3xl rounded-3xl rotate-12 border border-primary-500/10 dark:border-primary-500/10 light:border-primary-500/30"
+    >
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-80 h-80 bg-secondary-500/5 dark:bg-secondary-500/5 light:bg-secondary-500/10 backdrop-blur-3xl rounded-3xl -rotate-12 border border-secondary-500/10 dark:border-secondary-500/10 light:border-secondary-500/30"
+    >
+    </div>
   </div>
 
   <!-- Content -->
   <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="max-w-5xl mx-auto text-center">
-      
       <!-- Badge -->
-      <div class="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full mb-8 animate-fade-down">
-        <span class="w-2 h-2 bg-primary-400 rounded-full mr-3 animate-pulse"></span>
-        <span class="text-primary-300 text-sm font-medium" data-i18n="hero.badge">Solusi Digital Terbaik untuk UMKM Indonesia</span>
+      <div
+        class="inline-flex items-center px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full mb-8 animate-fade-down"
+      >
+        <span class="w-2 h-2 bg-primary-400 rounded-full mr-3 animate-pulse"
+        ></span>
+        <span
+          class="text-primary-300 text-sm font-medium"
+          data-i18n="hero.badge"
+          >Solusi Digital Terbaik untuk UMKM Indonesia</span
+        >
       </div>
 
       <!-- Main Heading -->
-      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight animate-fade-up">
+      <h1
+        class="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight animate-fade-up"
+      >
         <span data-i18n="hero.heading1">Semua Yang Anda Butuhkan</span>
         <span class="block mt-2">
-          <span data-i18n="hero.heading2">Untuk</span> <span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 via-primary-500 to-secondary-500 animate-glow" data-i18n="hero.heading3">Bertumbuh</span>
+          <span data-i18n="hero.heading2">Untuk</span>
+          <span
+            class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 via-primary-500 to-secondary-500 animate-glow"
+            data-i18n="hero.heading3">Bertumbuh</span
+          >
         </span>
       </h1>
 
       <!-- Subheading -->
-      <p class="text-lg sm:text-xl text-dark-200 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-up" style="animation-delay: 0.2s;" data-i18n="hero.subheading">
-        Gemercik Solution hadir sebagai partner teknologi terpercaya untuk UMKM. 
-        Dari website hingga AI, kami membantu bisnis Anda berkembang di era digital.
+      <p
+        class="text-lg sm:text-xl text-dark-200 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-up"
+        style="animation-delay: 0.2s;"
+        data-i18n="hero.subheading"
+      >
+        Gemercik Solution hadir sebagai partner teknologi terpercaya untuk UMKM.
+        Dari website hingga AI, kami membantu bisnis Anda berkembang di era
+        digital.
       </p>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up" style="animation-delay: 0.4s;">
-        <Button variant="primary" size="lg" href="#contact" class="w-full sm:w-auto group">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up"
+        style="animation-delay: 0.4s;"
+      >
+        <Button
+          variant="primary"
+          size="lg"
+          href="#contact"
+          class="w-full sm:w-auto group"
+        >
           <span data-i18n="hero.cta1">Mulai Konsultasi Gratis</span>
-          <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          <svg
+            class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>
         </Button>
-        <Button variant="outline" size="lg" href="#services" class="w-full sm:w-auto" data-i18n="hero.cta2">
+        <Button
+          variant="outline"
+          size="lg"
+          href="#services"
+          class="w-full sm:w-auto"
+          data-i18n="hero.cta2"
+        >
           Lihat Layanan Kami
         </Button>
       </div>
 
       <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16 animate-fade-up" style="animation-delay: 0.6s;">
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16 animate-fade-up"
+        style="animation-delay: 0.6s;"
+      >
         <div class="text-center">
-          <div class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">50+</div>
-          <div class="text-dark-300 text-sm" data-i18n="hero.stat1">Klien Puas</div>
+          <div
+            class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2"
+          >
+            50+
+          </div>
+          <div class="text-dark-300 text-sm" data-i18n="hero.stat1">
+            Klien Puas
+          </div>
         </div>
         <div class="text-center">
-          <div class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">100+</div>
-          <div class="text-dark-300 text-sm" data-i18n="hero.stat2">Proyek Selesai</div>
+          <div
+            class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2"
+          >
+            100+
+          </div>
+          <div class="text-dark-300 text-sm" data-i18n="hero.stat2">
+            Proyek Selesai
+          </div>
         </div>
         <div class="text-center">
-          <div class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">4+</div>
-          <div class="text-dark-300 text-sm" data-i18n="hero.stat3">Tahun Pengalaman</div>
+          <div
+            class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2"
+          >
+            4+
+          </div>
+          <div class="text-dark-300 text-sm" data-i18n="hero.stat3">
+            Tahun Pengalaman
+          </div>
         </div>
         <div class="text-center">
-          <div class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2">24/7</div>
-          <div class="text-dark-300 text-sm" data-i18n="hero.stat4">Support</div>
+          <div
+            class="text-3xl sm:text-4xl font-heading font-bold text-white mb-2"
+          >
+            24/7
+          </div>
+          <div class="text-dark-300 text-sm" data-i18n="hero.stat4">
+            Support
+          </div>
         </div>
       </div>
 
       <!-- Trusted By Section -->
-      <div class="max-w-5xl mx-auto animate-fade-up" style="animation-delay: 0.8s;">
-        <p class="text-dark-400 text-sm font-medium mb-6 uppercase tracking-wider" data-i18n="hero.trustedBy">Dipercaya oleh 50+ UMKM di Indonesia</p>
-        <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <img
-              src={`/images/client-logo-${i}.svg`}
-              alt={`Client ${i}`}
-              width="120"
-              height="40"
-              loading="lazy"
-              class="h-10 w-auto filter grayscale hover:grayscale-0 transition-all duration-300 dark:text-dark-300 light:text-dark-900"
-            />
-          ))}
+      <div
+        class="max-w-5xl mx-auto animate-fade-up"
+        style="animation-delay: 0.8s;"
+      >
+        <p
+          class="text-dark-400 text-sm font-medium mb-6 uppercase tracking-wider"
+          data-i18n="hero.trustedBy"
+        >
+          Dipercaya oleh 50+ UMKM di Indonesia
+        </p>
+        <div
+          class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+        >
+          {
+            [1, 2, 3, 4, 5, 6].map((i) => (
+              <img
+                src={`/images/client-logo-${i}.svg`}
+                alt={`Client ${i}`}
+                width="120"
+                height="40"
+                loading="lazy"
+                class="h-10 w-auto filter grayscale hover:grayscale-0 transition-all duration-300 dark:text-dark-300 light:text-dark-900"
+              />
+            ))
+          }
         </div>
       </div>
-
     </div>
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <a href="#services" class="flex flex-col items-center text-dark-300 hover:text-primary-400 transition-colors">
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <a
+      href="#services"
+      class="flex flex-col items-center text-dark-300 hover:text-primary-400 transition-colors"
+    >
       <span class="text-sm mb-2" data-i18n="hero.scroll">Scroll</span>
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </a>
   </div>
 </section>
-

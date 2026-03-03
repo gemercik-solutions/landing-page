@@ -1,10 +1,10 @@
 ---
 const navItems = [
-  { name: 'Beranda', nameEn: 'Home', href: '#hero', icon: 'home' },
-  { name: 'Layanan', nameEn: 'Services', href: '#services', icon: 'services' },
-  { name: 'Tentang', nameEn: 'About', href: '#about', icon: 'about' },
-  { name: 'FAQ', nameEn: 'FAQ', href: '#faq', icon: 'faq' },
-  { name: 'Kontak', nameEn: 'Contact', href: '#contact', icon: 'contact' },
+  { name: "Beranda", nameEn: "Home", href: "#hero", icon: "home" },
+  { name: "Layanan", nameEn: "Services", href: "#services", icon: "services" },
+  { name: "Tentang", nameEn: "About", href: "#about", icon: "about" },
+  { name: "FAQ", nameEn: "FAQ", href: "#faq", icon: "faq" },
+  { name: "Kontak", nameEn: "Contact", href: "#contact", icon: "contact" },
 ];
 ---
 
@@ -14,44 +14,101 @@ const navItems = [
   aria-label="Navigasi utama"
 >
   <div class="bottom-nav__bar w-full max-w-[480px] mx-auto">
-    {navItems.map((item) => (
-      <a
-        href={item.href}
-        class="bottom-nav__item nav-link group"
-        data-id={item.name}
-        data-en={item.nameEn}
-        data-href={item.href}
-      >
-        <span class="bottom-nav__icon">
-          {item.icon === 'home' && (
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l7-7-7 7m0 0l-7 7M14 10v10a1 1 0 01-1 1h-3" />
-            </svg>
-          )}
-          {item.icon === 'services' && (
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          )}
-          {item.icon === 'about' && (
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          )}
-          {item.icon === 'faq' && (
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          )}
-          {item.icon === 'contact' && (
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          )}
-        </span>
-        <span class="bottom-nav__label nav-text">{item.name}</span>
-      </a>
-    ))}
+    {
+      navItems.map((item) => (
+        <a
+          href={item.href}
+          class="bottom-nav__item nav-link group"
+          data-id={item.name}
+          data-en={item.nameEn}
+          data-href={item.href}
+        >
+          <span class="bottom-nav__icon">
+            {item.icon === "home" && (
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l7-7-7 7m0 0l-7 7M14 10v10a1 1 0 01-1 1h-3"
+                />
+              </svg>
+            )}
+            {item.icon === "services" && (
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            )}
+            {item.icon === "about" && (
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            )}
+            {item.icon === "faq" && (
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            )}
+            {item.icon === "contact" && (
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            )}
+          </span>
+          <span class="bottom-nav__label nav-text">{item.name}</span>
+        </a>
+      ))
+    }
   </div>
 </nav>
 
@@ -159,10 +216,10 @@ const navItems = [
 <script>
   // Set active item based on scroll position / hash
   function setActiveBottomNav() {
-    const nav = document.getElementById('mobile-bottom-nav');
+    const nav = document.getElementById("mobile-bottom-nav");
     if (!nav) return;
-    const items = nav.querySelectorAll('.bottom-nav__item');
-    const sections = ['hero', 'services', 'about', 'faq', 'contact'];
+    const items = nav.querySelectorAll(".bottom-nav__item");
+    const sections = ["hero", "services", "about", "faq", "contact"];
     const scrollY = window.scrollY;
     const viewportMid = scrollY + window.innerHeight / 2;
     let activeIndex = 0;
@@ -175,29 +232,33 @@ const navItems = [
       }
     });
     items.forEach((item, i) => {
-      item.setAttribute('data-active', i === activeIndex ? 'true' : 'false');
+      item.setAttribute("data-active", i === activeIndex ? "true" : "false");
     });
   }
 
-  window.addEventListener('scroll', setActiveBottomNav, { passive: true });
-  window.addEventListener('load', setActiveBottomNav);
-  window.addEventListener('hashchange', () => setTimeout(setActiveBottomNav, 100));
+  window.addEventListener("scroll", setActiveBottomNav, { passive: true });
+  window.addEventListener("load", setActiveBottomNav);
+  window.addEventListener("hashchange", () =>
+    setTimeout(setActiveBottomNav, 100),
+  );
 
   function updateBottomNavLabels(lang: string) {
-    document.querySelectorAll('#mobile-bottom-nav .nav-link').forEach((link) => {
-      const textSpan = link.querySelector('.nav-text');
-      const dataId = link.getAttribute('data-id');
-      const dataEn = link.getAttribute('data-en');
-      if (textSpan && dataId && dataEn) {
-        textSpan.textContent = lang === 'id' ? dataId : dataEn;
-      }
-    });
+    document
+      .querySelectorAll("#mobile-bottom-nav .nav-link")
+      .forEach((link) => {
+        const textSpan = link.querySelector(".nav-text");
+        const dataId = link.getAttribute("data-id");
+        const dataEn = link.getAttribute("data-en");
+        if (textSpan && dataId && dataEn) {
+          textSpan.textContent = lang === "id" ? dataId : dataEn;
+        }
+      });
   }
 
-  window.addEventListener('languageChanged', ((e: CustomEvent) => {
-    updateBottomNavLabels(e.detail?.language || 'id');
+  window.addEventListener("languageChanged", ((e: CustomEvent) => {
+    updateBottomNavLabels(e.detail?.language || "id");
   }) as EventListener);
 
-  const savedLang = localStorage.getItem('language') || 'id';
-  if (savedLang === 'en') updateBottomNavLabels('en');
+  const savedLang = localStorage.getItem("language") || "id";
+  if (savedLang === "en") updateBottomNavLabels("en");
 </script>
